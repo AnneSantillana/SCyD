@@ -3,7 +3,8 @@
  //BD('localhost', 'root', '', 'base');
  $liga = LIGA('base.usuarios');
  $campos = array('nombre',
-  'contraseña'=>'<input type="password" name="contraseña" id="contraseña" />');
+  'contraseña'=>'<input type="password" name="contraseña" id="contraseña" archivo="file" />',
+  'Adjuntar Archivo'=>'<input type="file" />');
  $atributos = array('form'=>'id="inserta" action="insertar.php" method="POST"');
  HTML::forma($liga, 'Nuevo usuario', $campos, $atributos);
  
@@ -13,8 +14,8 @@
  
  $campos = array('cual'=>$cual,
                  'nombre',
-                 'contraseña'=>'<input type="password" name="contraseña" id="xcontraseña" />',
-                 'fecha');
+                 'contraseña'=>'<input type="password" name="contraseña" id="xcontraseña" />'
+                 );
  $atributos = array(//'form'=>'id="modifica" action="modificar.php" method="POST"',
                     'form'=>array('id'=>'modifica', 'action'=>'modificar.php', 'method'=>'POST'),
                     'prefid'=>'x');
